@@ -1,0 +1,9 @@
+#
+# fips-libmodplug
+#
+---
+exports:
+    header-dirs:
+        - libmodplug/src
+    modules:
+        libmodplug: .

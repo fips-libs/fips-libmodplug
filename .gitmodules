@@ -1,0 +1,3 @@
+[submodule "libmodplug"]
+	path = libmodplug
+	url = https://github.com/floooh/libmodplug.git
