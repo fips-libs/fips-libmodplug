@@ -2,14 +2,13 @@
 # project: fips-libmodplug
 #
 if (NOT FIPS_IMPORT)
-    cmake_minimum_required(VERSION 2.8)
+    cmake_minimum_required(VERSION 3.0)
     get_filename_component(FIPS_ROOT_DIR "../fips" ABSOLUTE)
     include("${FIPS_ROOT_DIR}/cmake/fips.cmake")
     fips_setup()
     fips_project(fips-libmodplug)
 endif()
 
-add_definitions(-DMODPLUG_STATIC=1)
 fips_include_directories(libmodplug/src/libmodplug)
 fips_begin_module(libmodplug)
     fips_src(libmodplug/src GROUP .)
@@ -19,6 +18,7 @@ if (FIPS_WINDOWS)
 else() 
     target_compile_definitions(libmodplug PRIVATE HAVE_SINF=1 HAVE_SETENV=1 HAVE_STDINT_H=1)
 endif()
+target_compile_definitions(libmodplug PUBLIC MODPLUG_STATIC=1)
 
 set(args)
 if (FIPS_CLANG)
