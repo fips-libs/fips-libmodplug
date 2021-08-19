@@ -22,7 +22,7 @@ target_compile_definitions(libmodplug PUBLIC MODPLUG_STATIC=1)
 
 set(args)
 if (FIPS_CLANG)
-    set(args -Wno-unused-but-set-variable -Wno-shorten-64-to-32 -Wno-unused-parameter -Wno-unused-function -Wno-unused-private-field -Wno-dangling-else -Wno-missing-braces -Wno-unused-value -Wno-parentheses -Wno-sign-compare -Wno-unused-variable -Wno-deprecated-register -Wno-writable-strings -Wno-reorder -Wno-delete-non-virtual-dtor -Wno-deprecated-register -Wno-missing-braces -Wno-unused-function -Wno-unused-variable)
+    set(args -Wno-unknown-warning-option -Wno-unused-but-set-variable -Wno-shorten-64-to-32 -Wno-unused-parameter -Wno-unused-function -Wno-unused-private-field -Wno-dangling-else -Wno-missing-braces -Wno-unused-value -Wno-parentheses -Wno-sign-compare -Wno-unused-variable -Wno-deprecated-register -Wno-writable-strings -Wno-reorder -Wno-delete-non-virtual-dtor -Wno-deprecated-register -Wno-missing-braces -Wno-unused-function -Wno-unused-variable)
 elseif (FIPS_GCC)
     set(args -Wno-stringop-truncation -Wno-unused-parameter -Wno-restrict -Wno-format-overflow -Wno-implicit-fallthrough -Wno-misleading-indentation -Wno-unused-function -Wno-missing-braces -Wno-unused-value -Wno-parentheses -Wno-sign-compare -Wno-unused-variable -Wno-reorder -Wno-delete-non-virtual-dtor -Wno-maybe-uninitialized -Wno-unused-but-set-variable -Wno-unused-result)
 elseif (FIPS_WINDOWS)
