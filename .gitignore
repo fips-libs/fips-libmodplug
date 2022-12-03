@@ -4,4 +4,5 @@
 # this area is managed by fips, do not edit
 .fips-*
 *.pyc
+CMakeUserPresets.json
 #<fips
