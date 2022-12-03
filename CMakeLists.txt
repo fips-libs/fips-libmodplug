@@ -36,7 +36,3 @@ endif()
 if (args)
     target_compile_options(libmodplug PRIVATE ${args})
 endif()
-
-if (NOT FIPS_IMPORT)
-    fips_finish()
-endif()
